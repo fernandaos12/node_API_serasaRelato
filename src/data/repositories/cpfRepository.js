@@ -9,7 +9,10 @@ const serasacpfSchema = new mongoose.Schema({
     sexo: String,
     nomes_homonimos: String,
     status: String,
-    
+    dependentes: String,
+    escolaridade: String,
+    estado_civil: String,
+
     endereco: String,
     bairro: String,
     cidade: String,
@@ -18,10 +21,8 @@ const serasacpfSchema = new mongoose.Schema({
     tel_celular: String,
     tel_residencial: String,
    
-    endereco: String,
-    telefone: String,
-    data: String,
-  
+    enderecoComercial: String,
+ 
     pendencias_comerciais: String,
     pendencias_bancarias: String,
     cheque_fundo: String,
@@ -29,33 +30,17 @@ const serasacpfSchema = new mongoose.Schema({
     acoes_juridicas: String,
     falencias: String,
     dividas_vencidas: String,
-    pendencias_internas: String,
  
-    data: String,
-    segmento: String,
+    data_divida: String,
+    segmento_divida: String,
 
-    empresa: String,
-    cnpj: String,
-    ano_fundacao: String,
-    data_ultima_atualizacao: String,
-    participacao: String,
-    uf: String,
-
-    data_ultima_atualizacao_cadastral: String,
-    nome: String,
-    cpf: String,
-    rg: String,
-    orgao: String,
-    uf: String,
-    data_emissao: String,
-    data_nascimento: String,
-    uf_nascimento: String,
-    estado_civil: String,
-    dependentes: String,
-    escolaridade: String,
-
-    valor_escore: String,
-    chance_pagamento: String,          
+    empresa_credora: String,
+    cnpj_empresa_credora: String,
+    uf_empresa_credora: String,
+    data_insercao_dados_pela_empresa: String,
+    score: String,
+    chance_pagamento: String,
+       
     expiredAt: { type: Date, default: Date.now, createIndexes: { expires: '2592000' } }
 })
 
