@@ -1,0 +1,28 @@
+{
+  "port": 3000,
+  "database": {
+   "mongoUrl":"mongodb://admin2:teste123@ds229088.mlab.com:29088/serasa"
+  },
+  "serasa":{
+    "baseUrl": "https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=",
+    "userId":"52947993",
+    "password": "MYFD5@00"
+  },
+  "baseUrls": {
+    "zoho": "--",
+    "protheus": "--",
+    "integration": "--"
+  },
+  "credentials": {
+    "zoho": {
+      "integrationToken": "--",
+      "clientId": "--",
+      "clientSecret": "--",
+      "redirectUrl": "--",
+      "scope": "--",
+      "userIdentifier": "--",
+      "tokenManagement": "--",
+      "grantToken": "--"
+    }
+  }
+}

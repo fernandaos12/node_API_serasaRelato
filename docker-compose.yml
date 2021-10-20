@@ -1,0 +1,10 @@
+version: "2"
+services:
+  zoho-integration-api:
+    container_name: serasa
+    restart: always
+    build: .
+    ports:
+      - "4000:4000"
+    
+  

@@ -1,0 +1,43 @@
+{
+  "name": "zohointegration",
+  "version": "1.0.0",
+  "description": "",
+  "main": "startup.js",
+  "apidoc": {
+    "title": "Api Serasa Integration",
+    "version": "1.0.0",
+    "description": "Api Zoho integration Serasa"
+  },
+  "scripts": {
+    "start": "nodemon src/startup.js",
+    "homolog": "export NODE_ENV=homolog && node src/startup.js",
+    "prod": "export NODE_ENV=prod && node src/startup.js",
+    "apidoc": "./node_modules/.bin/apidoc -i controllers/ -o doc"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  },
+  "dependencies": {
+    "apidoc": "^0.25.0",
+    "axios": "^0.19.2",
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.19.0",
+    "config": "^1.29.4",
+    "express": "^4.17.1",
+    "express-basic-auth": "^1.2.0",
+    "express-xml-bodyparser": "^0.3.0",
+    "generate-password": "^1.5.1",
+    "moment": "^2.27.0",
+    "mongoose": "^5.9.6",
+    "node-cron": "^2.0.3",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.2"
+  }
+}
