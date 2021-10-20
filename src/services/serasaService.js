@@ -5,16 +5,16 @@ const serasaHelper = require('../helpers/serasaHelper')
 const cpfEnum = require('../enums/cpf')
 const genderEnum = require('../enums/gender')
 
-const searchCPF = async (cpf) => {
+const resultSerasa = async (cpf) => {
+ //retorna a resposta do serasa, substituir pela string provisoria estiver com acesso
+ // const resultSerasa = await httpSerasa.getSerasaCpfCnpjAsync(cpf) 
  
-  const resultSerasa = await httpSerasa.getSerasaCpfCnpjAsync(cpf) 
+ //provisório
+ const retornoSerasa = "B49C      000000000000191FC     FI0000200000000000000N99SFIMAS                            SS            00S        000000000000000S         19900000000000000000000000000000000000000000000000000N 2020110600103500580058    0059                                                                        0000                    3#                                  00                                      N  P006SSSSS  99SSSSSSSS SSSSS                                                                                        B001TWSNRJC SHCHTHL OHIZ PMI NI GZEBKDH          0000000019100000000000000018991130MCO SN   381000001920180528   9CB002   2020060218991130MARIA DAS DORES                                              000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004HA WKM NDXRXNE                299  HD 319    MIRANDOPOLIS        SAO PAULO                SP04049060000000    CB3530742020110010070180480030000000020012020060200000000                                                          CB35420201104INDUSTRIA DE INSUMOS                                   00000000003334170                              CB35420201029OUTROS                                                 00000000007082019                              CB35420201027OUTROS                                                 00000000031242928                              CB35420201021S3ENG EMPRESA DE INTELIGENCIA APLICADA A               00000000004305879                              CB35420201021OUTROS                                                 00000000031242928                              CB3701000000000000HA WKM COPNDZESHG             313                                     ALPHAVILLE          06539225B3702SANTANA DE PARNAIBA           SPFDN UKI CIARSUN                                   20191212            00000000B3701000000000000HA WKM OZKAHZUFE              6                                       TRANSURB            06670220B3702ITAPEVI                       SPFDN UKI CIARSUN                                   20191031            00000000B352HELIO MARIO MORESCO ME                  7527323500000  EMPRESA EXTINTA.                           000000202005CB352JAMIR JOSE DA SILVA ME                  7529074200000  SITUACAO DO CNPJ EM 00/00/0000: ATIVA      000000202005CB352HEITOR PEREIRA                          7530098800000  EMPRESA EXTINTA.                           000000202005CB352JOAO RUSCHEINSKY                        7533561200000  EMPRESA EXTINTA.                           000000202005CB352SILVIO SERENEU CUNHA ME                 7536368900000  EMPRESA EXTINTA.                           000000202005CB352MARIO MANDELLI                          7538270500000  EMPRESA EXTINTA.                           000000202005CB352WALDEMAR KOHN                           7540973000000  EMPRESA EXTINTA.                           000000202005CB352ISAURA BRITTO SELONKE                   7541834300000  EMPRESA EXTINTA.                           000000202002CB352FELIX DA SILVA TELLES ME                7541879800000  EMPRESA EXTINTA.                           000000202005CB352ACACIO HOEPPERS ME                      7541898800000  SITUACAO DO CNPJ EM 00/00/0000: ATIVA      000000202004CB001FDN DKAC PNGGK RH MKEJWDC                    0000000019100000000012345600000000SPO      535735797920180528   9CB002   2017050519600101TXJNYKA ACIKN U UQUZ                         FCART IDENTIDADE000000000123456SSP  00000000SPCB003CASADO      01SUPERIOR COMACAJUTIBA                BA0000000000000111111999900111234567800129652145000        CB004T FH ZFUWMF                   41             JARDINS             CAPAO RICO               SP05731260000000    CB005SOCIO/PROP000005000000000000123 080000000000000000000000000000000000         0000000000000000000000           CB006UWCH YFLCCCI ZYUPN DVCK                 000000R$ ADMINISTRADOR                 DIRETOR                        CB054000010000MENSAL      ALUGUEL        ALUGUEL        000010000PAIS    IRMAO                                     CB011UWDKXI CAKSI RY PNMEN              0011767699990022NMYYMK SD FDZNY                    0011555599990000        CB012ITAU                0001015134070011121212120000000000                                                        CB013ITAU                000000000BANCO BRADESCO      000000000                                                    CB014ITAU                CREDICARD BANCO BRADESCO      AMEX                                                        CB001VWJVW                                        0000000019100000000000000000000000         548336571920180528   9CB002   2018070319830825                                                             000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001XXJN YCLFCAI ESOEH                           0000000019100000000000000000000000         587067713920180528   9CB002   2007051819511123                                             M               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001UKLZK DCGLF HTQ GHUEYM                       0000000019100000000000000000000000         587082724920180528   9CB002   2007051819741218                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001UKLZK SIJ IHZE EIQMZ                         0000000019100000000000000000000000         587264953920180528   9CB002   2007052419701010                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001EXUZK DCOKF HK IHOX                          0000000019100000000000000000000000         587264999920180528   9CB002   2007052419721010                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CA900000500                                 NAO CONSTAM ANOTACOES NEGATIVAS PARA O DOCUMENTO CONSULTADO             T999000PROCESSO ENCERRADO NORMALMENTE                                                                             ?\n"
 
-  if(resultSerasa){
+  if(retornoSerasa){
     //NORMALIZAR OS BLOCOS E SALVAR NO BANCO UTILIZANDO O resultSerasa
-    let resultObject = await normalizeCpf(resultSerasa.data)
-
-    //await managerCpf.saveAllCpf(resultObject)
-
+    let resultObject = await managerCpf.saveAllCpf(resultObject)
     return resultObject // AQUI SERÀ O RETORNO DOS DADOS NORMALIZADO, POR ENQUANDO NAO ALTERAR O RETORNO
   }else{
     console.error();
@@ -33,88 +33,7 @@ const searchCNPJ = async (cnpj) => {
   }
 }
 
-const normalizeCpf = async (cpfDataString) => {
-
-  //provisório
-   //cpfDataString = "B49C      000000000000191FC     FI0000200000000000000N99SFIMAS                            SS            00S        000000000000000S         19900000000000000000000000000000000000000000000000000N 2020110600103500580058    0059                                                                        0000                    3#                                  00                                      N  P006SSSSS  99SSSSSSSS SSSSS                                                                                        B001TWSNRJC SHCHTHL OHIZ PMI NI GZEBKDH          0000000019100000000000000018991130MCO SN   381000001920180528   9CB002   2020060218991130MARIA DAS DORES                                              000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004HA WKM NDXRXNE                299  HD 319    MIRANDOPOLIS        SAO PAULO                SP04049060000000    CB3530742020110010070180480030000000020012020060200000000                                                          CB35420201104INDUSTRIA DE INSUMOS                                   00000000003334170                              CB35420201029OUTROS                                                 00000000007082019                              CB35420201027OUTROS                                                 00000000031242928                              CB35420201021S3ENG EMPRESA DE INTELIGENCIA APLICADA A               00000000004305879                              CB35420201021OUTROS                                                 00000000031242928                              CB3701000000000000HA WKM COPNDZESHG             313                                     ALPHAVILLE          06539225B3702SANTANA DE PARNAIBA           SPFDN UKI CIARSUN                                   20191212            00000000B3701000000000000HA WKM OZKAHZUFE              6                                       TRANSURB            06670220B3702ITAPEVI                       SPFDN UKI CIARSUN                                   20191031            00000000B352HELIO MARIO MORESCO ME                  7527323500000  EMPRESA EXTINTA.                           000000202005CB352JAMIR JOSE DA SILVA ME                  7529074200000  SITUACAO DO CNPJ EM 00/00/0000: ATIVA      000000202005CB352HEITOR PEREIRA                          7530098800000  EMPRESA EXTINTA.                           000000202005CB352JOAO RUSCHEINSKY                        7533561200000  EMPRESA EXTINTA.                           000000202005CB352SILVIO SERENEU CUNHA ME                 7536368900000  EMPRESA EXTINTA.                           000000202005CB352MARIO MANDELLI                          7538270500000  EMPRESA EXTINTA.                           000000202005CB352WALDEMAR KOHN                           7540973000000  EMPRESA EXTINTA.                           000000202005CB352ISAURA BRITTO SELONKE                   7541834300000  EMPRESA EXTINTA.                           000000202002CB352FELIX DA SILVA TELLES ME                7541879800000  EMPRESA EXTINTA.                           000000202005CB352ACACIO HOEPPERS ME                      7541898800000  SITUACAO DO CNPJ EM 00/00/0000: ATIVA      000000202004CB001FDN DKAC PNGGK RH MKEJWDC                    0000000019100000000012345600000000SPO      535735797920180528   9CB002   2017050519600101TXJNYKA ACIKN U UQUZ                         FCART IDENTIDADE000000000123456SSP  00000000SPCB003CASADO      01SUPERIOR COMACAJUTIBA                BA0000000000000111111999900111234567800129652145000        CB004T FH ZFUWMF                   41             JARDINS             CAPAO RICO               SP05731260000000    CB005SOCIO/PROP000005000000000000123 080000000000000000000000000000000000         0000000000000000000000           CB006UWCH YFLCCCI ZYUPN DVCK                 000000R$ ADMINISTRADOR                 DIRETOR                        CB054000010000MENSAL      ALUGUEL        ALUGUEL        000010000PAIS    IRMAO                                     CB011UWDKXI CAKSI RY PNMEN              0011767699990022NMYYMK SD FDZNY                    0011555599990000        CB012ITAU                0001015134070011121212120000000000                                                        CB013ITAU                000000000BANCO BRADESCO      000000000                                                    CB014ITAU                CREDICARD BANCO BRADESCO      AMEX                                                        CB001VWJVW                                        0000000019100000000000000000000000         548336571920180528   9CB002   2018070319830825                                                             000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001XXJN YCLFCAI ESOEH                           0000000019100000000000000000000000         587067713920180528   9CB002   2007051819511123                                             M               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001UKLZK DCGLF HTQ GHUEYM                       0000000019100000000000000000000000         587082724920180528   9CB002   2007051819741218                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001UKLZK SIJ IHZE EIQMZ                         0000000019100000000000000000000000         587264953920180528   9CB002   2007052419701010                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CB001EXUZK DCOKF HK IHOX                          0000000019100000000000000000000000         587264999920180528   9CB002   2007052419721010                                             F               000000000000000     00000000  CB003            00                                       0000000000000613225820900000000000000009236376316        CB004AL DOS QUINIMURAS 187                        PLANALTO PAULISTA   SAO PAULO                SP04068900201003    CA900000500                                 NAO CONSTAM ANOTACOES NEGATIVAS PARA O DOCUMENTO CONSULTADO             T999000PROCESSO ENCERRADO NORMALMENTE                                                                             ?\n"
-  resultado = {}
-  let B49C = cpfDataString.substring(0, 399)
-  let P006 = cpfDataString.substring(400, 514)
-  let B001 = cpfDataString.substring(515, 630)
-  let B002 = cpfDataString.substring(630, 745)
-  let B003 = cpfDataString.substring(745, 860)
-  let B004 = cpfDataString.substring(860, 975)
-  let B005 = cpfDataString.substring(975, 1090)
-  let B006 = cpfDataString.substring(1090, 1205)
-
-
-
-  B49C_Formated = normalizeB49C(B49C)
-  //P006_Formated = normalizeB002(P006)
-
-  resultado.B001 = normalizeB001(B001)
-  resultado.B002 = normalizeB002(B002)
-  resultado.B003 = normalizeB003(B003)
-  resultado.B004 = normalizeB004(B004)
-  resultado.B005 = normalizeB005(B005)
-  resultado.B006 = normalizeB006(B006)
-
-
-  /*
-  values.tipo_registro = tipo_registro,
-  values.grafia_cpf = grafia_cpf,
-  values.nome = nome,
-  values.cpf = cpf,
-  values.data_nascimento = data_nascimento,
-  values.nome_mae = nome_mae,
-  values.sexo = sexo,
-  values.nomes_homonimos = nomes_homonimos,
-  values.status = situacao_cpf,
-  values.endereco = endereco,
-  values.bairro = bairro,
-  values.cidade = cidade,
-  values.estado = estado,
-  values.tel_comercial = fone_comercial,
-  values.tel_celular = fone_celular,
-  values.tel_residencial = fone_residencial,
-  values.endereco_alternativo = endereco_alternativo,
-  values.telefone_alternativo = fone_alternativo
-  values.data_inclusao_endereco_altern= ,
-  values.pendencias_comerciais = ,
-  values.pendencias_bancarias = ,
-  values.cheque_fundo = ,
-  values.protestos = ,
-   values.acoes_juridicas = ,
-   values.falencias = ,
-   values.dividas_vencidas = ,
-   values.pendencias_internas = ,
-   values.data = ,
-   values.segmento = ,
-   values.empresa = ,
-   values.cnpj = ,
-   values.ano_fundacao = ,
-   values.data_ultima_atualizacao = ,
-   values.participacao = ,
-   values.uf = ,
-   values.data_ultima_atualizacao_cadastral = data_atual_cadastral,
-   values.nome = ,
-   values.cpf = cpf,
-   values.rg = rg ,
-   values.orgao = orgao_emissor,
-   values.uf = uf_emissao,
-   values.data_emissao = data_emissao ,
-   values.data_nascimento = data_nascimento ,
-   values.uf_nascimento = uf_nascimento,
-   values.estado_civil = estado_civil,
-   values.dependentes = dependentes,
-   values.escolaridade = escolaridade,
-   values.valor_escore = ,
-   values.chance_pagamento = */
-
-   return resultado
-
-}
-
+/*
 const normalizeB49C = (B49C) => {
   const tipo_registro = B49C.substring(0, 4)
   const grafia_cpf = B49C.substring(11, 26)
@@ -218,7 +137,7 @@ const normalizeB006 = (B006) => {
   return b006
 }
 
-
+*/
 
 const sendZohoResultSerasaFromMongoByCpf = async (bodyCpf) => {
   const resultMongoByCpf = await managerCpf.getByCpf(bodyCpf)
@@ -234,5 +153,6 @@ const sendZohoResultSerasaFromMongoByCnpj = async (bodyCnpj) => {
 module.exports = {
   searchCPF,
   sendZohoResultSerasaFromMongoByCpf,
-  sendZohoResultSerasaFromMongoByCnpj
+  sendZohoResultSerasaFromMongoByCnpj,
+  resultSerasa
 }

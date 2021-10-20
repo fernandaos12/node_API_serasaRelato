@@ -63,5 +63,6 @@ const getByCpf = async (cpf) => {
 
 module.exports = {
     getByCpf,
-    saveAllCpf,
+    saveAllCpf
+}
 }
