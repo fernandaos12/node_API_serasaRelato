@@ -10,3 +10,5 @@ RUN npm install
 COPY . /usr/src/app
 EXPOSE 3000
 CMD [ "npm", "start" ]
+
+## execute docker build -t serasa .
