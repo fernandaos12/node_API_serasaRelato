@@ -2,14 +2,14 @@ const{ resultserasa } = require('../services/serasaService');
   
 var dados = resultserasa
 
-let B49C = dados.substring(0, 399)
-let P006 = dados.substring(400, 514)
+/*let B49C = dados.substring(0, 399)
+let P006 = dados.substring(400, 514)*/
 let B001 = dados.substring(515, 630)
 let B002 = dados.substring(630, 745)
 let B003 = dados.substring(745, 860)
 let B004 = dados.substring(860, 975)
 let B005 = dados.substring(975, 1090)
-let B006 = dados.substring(1090, 1205)
+//let B006 = dados.substring(1090, 1205)
 
 
        var nome = () => {

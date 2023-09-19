@@ -7,38 +7,39 @@ const router = express.Router()
 const controllerName = 'serasa'
 
 /**
-    * @api {get} /client/cpf/:cpf Get User cpf information and Date of Registration.
+    * @api {get} /client/consultaserasa/:documento Endpoint consulta serasa 
     * @apiVersion 1.0.0
     * @apiName Get
-    * @apiGroup Api integration Serasa
+    * @apiGroup Api integração Serasa
     * @apiPermission authenticated user
-    * @apiParam {String} /:cpf Search results from cpf
+    * @apiParam {String} /:documento parâmetro de consulta por cpf ou cnpj
     */
 
-  router.get(`/${controllerName}/cpf/:cpf`, async (req, res) => {
+  router.get(`/${controllerName}/consulta/:documento`, async (req, res) => {
 
     try {
-      
-      const cpf = req.params.cpf
-      const response = await serasaService.searchCPF(cpf)
-      if(response.status == 200){
-        return res.status(200).send(response.data)
+
+      const documento = req.params.documento;
+
+      const cpf = documento.length == 11;
+
+      if(cpf)
+      {
+          const retorno =  await serasaService.searchCPF(documento);    
+          return res.json(retorno.data);          
       }
-      return res.status(202).json(response)
-    } catch (err) {
+      else{
+        const retorno = await serasaService.searchCnpj(documento);    
+        return res.json(response.data);   
+      }
+
+         } catch (err) {
       console.log(err);
     }
   })
 
-/**
-    * @api {get} /client/cnpj/:cnpj Get User cpf information and Date of Registration.
-    * @apiVersion 1.0.0
-    * @apiName Get
-    * @apiGroup Api integration Serasa
-    * @apiPermission authenticated user
-    * @apiParam {String} :cnpj Search results from cnpj
-    */
 
+/*
 router.get(`/${controllerName}/cnpj/:cnpj`, async (req, res) => {
 
   try {
@@ -48,6 +49,6 @@ router.get(`/${controllerName}/cnpj/:cnpj`, async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-})
+})*/
 
 module.exports = router
