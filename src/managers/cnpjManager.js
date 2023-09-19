@@ -1,6 +1,6 @@
 const cnpjRepository = require('../data/repositories/cnpjRepository');
 
-const saveAllCnpj = async () => {
+const gravarConsultaCnpj = async () => {
     const saveCnpj = await cnpjRepository.create()
     return saveCnpj
 }
@@ -13,5 +13,5 @@ const getByCnpj = async(cnpj)=>{
 
 module.exports = {
     getByCnpj,
-    saveAllCnpj
+    gravarConsultaCnpj
 }
