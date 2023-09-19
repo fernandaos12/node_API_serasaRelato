@@ -1,4 +1,13 @@
-const{ resultserasa } = require('../services/serasaService');
+//importara os blocos cpf formando o relatorio sintetico final 
+
+const {blocoN001} = require('./services/blocoN001');
+
+
+
+
+
+///// os blocos abaixo é para criar um arquivo com cada bloco onde sera tratado e depois importar pra ca e formar o relatorio final 
+const{ resultserasa } = require('./serasaService');
   
 var dados = resultserasa
 

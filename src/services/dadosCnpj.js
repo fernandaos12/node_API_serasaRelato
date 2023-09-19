@@ -1,3 +1,7 @@
+
+// Importara os blocos cnpj formando o relatorio sintetico final 
+
+
 //const mongoose = require('mongoose');
 //const { startAsync } = require('../database');
 //const { db, collection } = require('../data/repositories/cnpjRepository');
