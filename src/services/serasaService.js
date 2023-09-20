@@ -3,7 +3,7 @@ const managerCnpj = require('../managers/cnpjManager')
 const httpSerasa = require('../helpers/httpSerasa')
 
 
-const resultgravarConsultaCpf = async (cpf) => {
+const ConsultaCpf = async (cpf) => {
   
   const retornoConsulta = await httpSerasa.getSerasaCpf(cpf);
   
@@ -34,6 +34,6 @@ const resultgravarConsultaCnpj = async (cnpj) => {
 
 
 module.exports = {
-  resultgravarConsultaCpf,
-  resultgravarConsultaCnpj
+  ConsultaCpf,
+  ConsultaCnpj
 }

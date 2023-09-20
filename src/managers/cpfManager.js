@@ -18,7 +18,8 @@ async function GravarConsulta(req, res){
     }
 }
 
-GravarConsulta()
+GravarConsulta.create();
+
 
 const getByCpf = async (cpf) => {
     const requestResult = await cpfRepository.modelCpf.find({ cpf: cpf })

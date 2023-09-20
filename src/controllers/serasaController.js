@@ -25,11 +25,11 @@ const controllerName = 'serasa'
 
       if(cpf)
       {
-          const retorno =  await serasaService.searchCPF(documento);    
+          const retorno =  await serasaService.ConsultaCpf(documento);    
           return res.json(retorno.data);          
       }
       else{
-        const retorno = await serasaService.searchCnpj(documento);    
+        const retorno = await serasaService.ConsultaCnpj(documento);    
         return res.json(response.data);   
       }
 
