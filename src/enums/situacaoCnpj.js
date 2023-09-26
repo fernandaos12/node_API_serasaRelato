@@ -1,11 +1,11 @@
 const situacaoCnpj = {
-    "1" :  "Ativa",
-    "2" : "Suspensa",
-    "3" : "Inativa",
-    "4" : "Baixada",
-    "5" : "Nula"
+  0: 'Inativa',
+  2: 'Ativa',
+  4: 'Nula',
+  6: 'Suspensa',
+  7: 'Baixada'
 }
 
 module.exports = {
-    situacaoCnpj
+  situacaoCnpj
 }

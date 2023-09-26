@@ -1,13 +1,13 @@
 
 const situacaoCpf = {
-"1" : "Regular",
-"2" : "Pendente de Regularização",
-"3" : "Suspensa",
-"4" : "Titular Falecido",
-"5" : "Cancelada",
-"6" : "Nula"
+  2: 'Regular',
+  3: 'Pendente de Regularização',
+  4: 'Nula',
+  6: 'Suspensa',
+  7: 'Titular Falecido',
+  9: 'Cancelada'
 }
 
 module.exports = {
-    situacaoCpf
+  situacaoCpf
 }
