@@ -1,12 +1,12 @@
 {
   "port": 3000,
   "database": {
-   "mongoUrl":"mongodb://"
+   "mongoUrl":"mongodb+srv://fernandaos12:RTNDk6xMg4w4Ggm@cluster0.t1sqkqk.mongodb.net/?retryWrites=true&w=majority"
   },
   "serasa":{
-    "baseUrl": "https://mqlinuxext.serasa.com.br/Homologa/consultahttps?p=",
-    "userId":"52947993",
-    "password": "MYFD5@00"
+    "baseUrl": "https://mqlinuxext-2.serasa.com.br/Homologa/consultahttps?p=",
+    "userId":"18863506",
+    "password": "aonet@23"
   },
   "baseUrls": {
     "zoho": "--",

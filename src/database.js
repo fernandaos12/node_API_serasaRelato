@@ -4,13 +4,12 @@ const mongodbUrlt =  configurationManager.getMongoUrl()
 
 
 const startAsync = async () => {
-  const mongodbUrl = configurationManager.getMongoUrl()
-
+  
   await mongoose.connect(mongodbUrlt, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
-
+  
   mongoose.set('useFindAndModify', false)
 }
 

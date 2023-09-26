@@ -1,8 +1,8 @@
 const config = require('config')
 
 const getMongoUrl = () => {
- const mongodbUrl = config.get('database.mongoUrl')
- 
+  const mongodbUrl = config.get('database.mongoUrl')
+
   if (!mongodbUrl) {
     throw new Error('The mongo url was not found on config.')
   }
@@ -39,7 +39,6 @@ const getSerasaPassword = () => {
 
   return password
 }
-
 
 const getZohoUrl = () => {
   const baseUrl = config.get('baseUrls.zoho')
