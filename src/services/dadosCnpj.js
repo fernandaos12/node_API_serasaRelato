@@ -1,10 +1,9 @@
 
-// Importara os blocos cnpj formando o relatorio sintetico final 
+// Importara os blocos cnpj formando o relatorio sintetico final
 
-
-//const mongoose = require('mongoose');
+/* const mongoose = require('mongoose');
 //const { startAsync } = require('../database');
-//const { db, collection } = require('../data/repositories/cnpjRepository');
+const { db, collection } = require('../data/repositories/cnpjRepository'); */
 /*
 const { resultserasa } = require('./clientService');
 
@@ -66,7 +65,5 @@ async function inserirCnpj(req, res) {
     return console.log('cnpj inserido')
 }
 //inserirCnpj()
-
-
 
 */

@@ -1,23 +1,22 @@
 const values = {
-    "M": 'Masculino',
-    "F": 'Feminino'
+  M: 'Masculino',
+  F: 'Feminino'
 }
 
-
 const genderFormater = (gender) => {
-    if (!gender) {
-        return null
-    }
+  if (!gender) {
+    return null
+  }
 
-    const value = Object.keys(values).find(key => key === gender)
+  const value = Object.keys(values).find(key => key === gender)
 
-    if (!value) {
-        return "Sexo não encontrado"
-    }
+  if (!value) {
+    return 'Sexo não encontrado'
+  }
 
-    return values[value]
+  return values[value]
 }
 
 module.exports = {
-    genderFormater
+  genderFormater
 }
