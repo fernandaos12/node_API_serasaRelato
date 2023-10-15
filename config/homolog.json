@@ -1,13 +1,5 @@
 {
   "database": {
     "mongoUrl": ""
-  },
-  "credentials": {
-    "zoho": {
-      "clientId": "",
-      "clientSecret": "",
-      "userIdentifier": "",
-      "grantToken": ""
-    }
   }
 }
